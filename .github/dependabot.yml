@@ -2,7 +2,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "requirements/"
+    directory: "requirements/ansible"
     schedule:
       interval: "daily"
     groups:
@@ -11,16 +11,22 @@ updates:
           - "ansible-*"
         update-types:
           - "patch"
-      piptools:
-        patterns:
-          - "build"
-          - "packaging"
-          - "pip-tools"
-          - "pyproject-hooks"
-          - "wheel"
-        update-types:
-          - "minor"
-          - "patch"
       others:
         patterns:
           - "*"
+        exclude-patterns:
+          - "ansible-*"
+        update-types:
+          - "minor"
+          - "patch"
+  - package-ecosystem: "pip"
+    directory: "requirements/piptools"
+    schedule:
+      interval: "daily"
+    groups:
+      piptools:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
