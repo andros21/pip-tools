@@ -1,0 +1,6 @@
+---
+# requirements.yml
+
+collections:
+  - name: community.general
+    version: 6.6.2
