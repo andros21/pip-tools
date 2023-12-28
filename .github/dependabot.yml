@@ -1,0 +1,14 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "requirements/"
+    schedule:
+      interval: "daily"
+    groups:
+      piptools:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
