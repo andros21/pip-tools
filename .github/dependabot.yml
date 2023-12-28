@@ -6,9 +6,21 @@ updates:
     schedule:
       interval: "daily"
     groups:
+      ansible:
+        patterns:
+          - "ansible-*"
+        update-types:
+          - "patch"
       piptools:
         patterns:
-          - "*"
+          - "build"
+          - "packaging"
+          - "pip-tools"
+          - "pyproject-hooks"
+          - "wheel"
         update-types:
           - "minor"
           - "patch"
+      others:
+        patterns:
+          - "*"
