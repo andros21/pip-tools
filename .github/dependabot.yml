@@ -2,25 +2,36 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "requirements/"
+    directory: "requirements/ansible"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "ansible-*"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
     groups:
       ansible:
         patterns:
           - "ansible-*"
         update-types:
           - "patch"
-      piptools:
-        patterns:
-          - "build"
-          - "packaging"
-          - "pip-tools"
-          - "pyproject-hooks"
-          - "wheel"
-        update-types:
-          - "minor"
-          - "patch"
       others:
         patterns:
           - "*"
+        exclude-patterns:
+          - "ansible-*"
+        update-types:
+          - "minor"
+          - "patch"
+  - package-ecosystem: "pip"
+    directory: "requirements/piptools"
+    schedule:
+      interval: "daily"
+    groups:
+      piptools:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
