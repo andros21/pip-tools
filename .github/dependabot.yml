@@ -35,3 +35,14 @@ updates:
         update-types:
           - "minor"
           - "patch"
+  - package-ecosystem: "pip"
+    directory: "requirements/local"
+    schedule:
+      interval: "daily"
+    groups:
+      piptools:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
