@@ -40,9 +40,11 @@ updates:
     schedule:
       interval: "daily"
     groups:
-      piptools:
+      local:
         patterns:
           - "*"
+        exclude-patterns:
+          - "yt-dlp" # no semver
         update-types:
           - "minor"
           - "patch"
