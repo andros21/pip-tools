@@ -222,7 +222,7 @@ idna==3.6 \
 ipython==8.19.0 \
     --hash=sha256:2f55d59370f59d0d2b2212109fe0e6035cfea436b1c0e6150ad2244746272ec5 \
     --hash=sha256:ac4da4ecf0042fb4e0ce57c60430c2db3c719fa8bdf92f8631d6bd8a5785d1f0
-    # via -r roles/pkg/requirements/pip-venv.in
+    # via -r pip-venv.in
 jedi==0.19.1 \
     --hash=sha256:cf0496f3651bc65d7174ac1b7d043eff454892c708a87d1b683e57b569927ffd \
     --hash=sha256:e983c654fe5c02867aef4cdfce5a2fbb4a50adc0af145f70504238f18ef5e7e0
@@ -254,7 +254,7 @@ platformdirs==4.1.0 \
 pre-commit==3.6.0 \
     --hash=sha256:c255039ef399049a5544b6ce13d135caba8f2c28c3b4033277a788f434308376 \
     --hash=sha256:d30bad9abf165f7785c15a21a1f46da7d0677cb00ee7ff4c579fd38922efe15d
-    # via -r roles/pkg/requirements/pip-venv.in
+    # via -r pip-venv.in
 prompt-toolkit==3.0.43 \
     --hash=sha256:3527b7af26106cbc65a040bcc84839a3566ec1b051bb0bfe953631e704b0ff7d \
     --hash=sha256:a11a29cb3bf0a28a387fe5122cdb649816a957cd9261dcedf8c9f1fef33eacf6
@@ -463,10 +463,10 @@ websockets==12.0 \
     --hash=sha256:fc4e7fa5414512b481a2483775a8e8be7803a35b30ca805afa4998a84f9fd9e8 \
     --hash=sha256:ffefa1374cd508d633646d51a8e9277763a9b78ae71324183693959cf94635a7
     # via yt-dlp
-yt-dlp==2023.11.16 \
-    --hash=sha256:0322ba85aa4afdb75f8641ed550e5958964daff034aeb477abb15031fd9a51ed \
-    --hash=sha256:f0ccdaf12e08b15902601a4671c7ab12906d7b11de3ae75fa6506811c24ec5da
-    # via -r roles/pkg/requirements/pip-venv.in
+yt-dlp==2023.12.30 \
+    --hash=sha256:a11862e57721b0a0f0883dfeb5a4d79ba213a2d4c45e1880e9fd70f8e6570c38 \
+    --hash=sha256:c00d9a71d64472ad441bcaa1ec0c3797d6e60c9f934f270096a96fe51657e7b3
+    # via -r pip-venv.in
 
 # WARNING: The following packages were not pinned, but pip requires them to be
 # pinned when the requirements file includes hashes and the requirement is not
