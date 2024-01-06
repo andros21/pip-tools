@@ -5,6 +5,8 @@ updates:
     directory: "requirements/ansible"
     schedule:
       interval: "daily"
+      time: "07:00"
+      timezone: "Europe/Rome"
     ignore:
       - dependency-name: "ansible-*"
         update-types:
@@ -25,11 +27,13 @@ updates:
           - "minor"
           - "patch"
   - package-ecosystem: "pip"
-    directory: "requirements/piptools"
+    directory: "requirements/pip"
     schedule:
       interval: "daily"
+      time: "07:00"
+      timezone: "Europe/Rome"
     groups:
-      piptools:
+      pip:
         patterns:
           - "*"
         update-types:
@@ -39,12 +43,14 @@ updates:
     directory: "requirements/local"
     schedule:
       interval: "daily"
+      time: "07:00"
+      timezone: "Europe/Rome"
     groups:
       local:
         patterns:
           - "*"
         exclude-patterns:
-          - "yt-dlp" # no semver
+          - "yt-dlp"   # no semver
         update-types:
           - "minor"
           - "patch"
