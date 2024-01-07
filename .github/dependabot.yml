@@ -18,14 +18,6 @@ updates:
           - "ansible-*"
         update-types:
           - "patch"
-      others:
-        patterns:
-          - "*"
-        exclude-patterns:
-          - "ansible-*"
-        update-types:
-          - "minor"
-          - "patch"
   - package-ecosystem: "pip"
     directory: "requirements/pip"
     schedule:
